@@ -1,4 +1,4 @@
-# CPR (updaiting..)
+# CPR
 
 The official code of CPR: Classifier-Projection Regularization for Continual Learning (ICLR 2021) [[arxiv]](https://arxiv.org/pdf/2006.07326.pdf)
 
@@ -13,7 +13,7 @@ $ mkdir weights data result_data
 
 ### 2. Prepare Datasets
 
-1) Download datasets from [[this google drive link]]()
+1) Download datasets (CIFAR[1], Omniglot[2] and CUB200[3]) from [[this google drive link]](https://drive.google.com/file/d/19UaTcjGYj8YUBlj69mPK7zcVvFUR8bso/view?usp=sharing)
 2) Locate downloaded datasets to './data' directory
 
 ```
@@ -48,7 +48,7 @@ $ ./train_cub200.sh
 ## QnA
 ### 1. How to apply CPR to another CL algorithm?
 
-: The implementation for CPR is quite simple. As shown in Equation (3) of the paper, you can implement CPR by maximizing an entropy of a model's softmax output (in other words, minimizing KL divergence between the model's softmax output and uniform distribution). Note that a lambda (the hyperparameter for entropy maximization) should be selected carefully.
+: The implementation for CPR is quite simple. As shown in Equation (3) of the paper, you can implement CPR by maximizing an entropy of a model's softmax output (in other words, minimizing KL divergence between the model's softmax output and uniform distribution). Note that a lambda (the hyperparameter for entropy maximization) should be selected carefully. As an example, check Line 222 at './approaches/ewc_cpr.py'.
 
 
 ## Citation
@@ -65,6 +65,10 @@ $ ./train_cub200.sh
 ```
 
 ## Reference
+[1] Krizhevsky, Alex, and Geoffrey Hinton. "Learning multiple layers of features from tiny images." (2009): 7.
 
+[2] Lake, Brenden M., Ruslan Salakhutdinov, and Joshua B. Tenenbaum. "Human-level concept learning through probabilistic program induction." Science 350.6266 (2015): 1332-1338.
+
+[3] Welinder, Peter, et al. "Caltech-UCSD birds 200." (2010).
 
 
