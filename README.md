@@ -1,4 +1,4 @@
-# CPR (updaiting..)
+# CPR
 
 The official code of CPR: Classifier-Projection Regularization for Continual Learning (ICLR 2021) [[arxiv]](https://arxiv.org/pdf/2006.07326.pdf)
 
