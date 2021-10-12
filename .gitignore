@@ -1,0 +1,7 @@
+data/
+weights/
+result_data/
+
+gpu0.sh
+train.sh
+
