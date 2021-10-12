@@ -10,8 +10,6 @@ args = get_args()
 
 if args.conv_net:
     from networks.conv_net import Net
-else:
-    from networks.mlp import Net
 
 class Appr(object):
 

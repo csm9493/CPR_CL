@@ -58,7 +58,6 @@ class Appr(object):
                 self.fisher_running[n] = 0
                 self.p_old[n] = p.data.clone()
         
-        
         return
             
         return rot_image
