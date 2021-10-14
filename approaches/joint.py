@@ -2,14 +2,9 @@ import sys,time
 import numpy as np
 import torch
 from copy import deepcopy
-
 import utils
-
 from arguments import get_args
 args = get_args()
-
-if args.conv_net:
-    from networks.conv_net import Net
 
 class Appr(object):
 

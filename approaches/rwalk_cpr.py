@@ -12,9 +12,6 @@ from torchvision import models
 from torchvision.models.resnet import *
 args = get_args()
 
-if args.conv_net:
-    from networks.conv_net import Net
-    
 class Appr(object):
     """ Class implementing the Elastic Weight Consolidation approach described in http://arxiv.org/abs/1612.00796 """
 

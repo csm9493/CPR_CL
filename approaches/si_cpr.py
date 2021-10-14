@@ -13,9 +13,6 @@ from torchvision import models
 from torchvision.models.resnet import *
 args = get_args()
 
-if args.conv_net:
-    from networks.conv_net import Net
-    
 class Appr():
     """ Class implementing the Synaptic intelligence approach described in https://arxiv.org/abs/1703.04200 """
 

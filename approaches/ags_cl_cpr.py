@@ -130,13 +130,11 @@ class Appr(object):
         temp=utils.gs_cal(t,xtrain,ytrain,self.criterion, self.model)
         for n in temp.keys():
             if t>0:
-                self.omega[n] = args.eta * self.omega[n] + temp[n]
+                self.omega[n] = args.nu * self.omega[n] + temp[n]
             else:
                 self.omega = temp
             self.mask[n] = (self.omega[n]>0).float()
             
-        torch.save(self.model.state_dict(), './models/trained_model/' + self.log_name + '_task_{}.pt'.format(t))
-        
         test_loss, test_acc = self.eval(t, xvalid, yvalid)
         print(' Valid: loss={:.3f}, acc={:5.1f}% |'.format(test_loss,100*test_acc))
         
@@ -174,7 +172,8 @@ class Appr(object):
                         mask = (self.omega[name]==0).float().unsqueeze(-1)
 
                     zero_cnt = int((mask.sum()).item())
-                    indice = np.random.choice(range(zero_cnt), int(zero_cnt*(1-args.rho)), replace=False)
+#                     indice = np.random.choice(range(zero_cnt), int(zero_cnt*(1-args.rho)), replace=False)
+                    indice = np.random.choice(range(zero_cnt), int(zero_cnt*(1-args.rho)), replace=True)
                     indice = torch.tensor(indice).long()
                     idx = torch.arange(weight.shape[0])[mask.flatten(0)==1][indice]
                     mask[idx] = 0
