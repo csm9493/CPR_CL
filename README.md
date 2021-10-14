@@ -8,7 +8,7 @@ The official code of CPR: Classifier-Projection Regularization for Continual Lea
 
 ```
 $ pip install -r requirements.txt
-$ mkdir weights data result_data
+$ mkdir weights data
 ```
 
 ### 2. Prepare Datasets
