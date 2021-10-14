@@ -317,7 +317,7 @@ class Appr(object):
         temp=self.cal_omega(t, x, y, criterion, model, sbatch)
         for n in temp.keys():
             if self.t>0:
-                self.omega[n] = self.args.gamma * self.omega[n]+temp[n] #+ t* temp[n]*mask      # Checked: it is better than the other option
+                self.omega[n] = self.args.nu * self.omega[n]+temp[n] #+ t* temp[n]*mask      # Checked: it is better than the other option
             else:
                 self.omega = temp
             self.mask[n] = (self.omega[n]>0).float()

@@ -5,6 +5,9 @@ EXPERIMENT='split_CUB200_new'
 TASK_NUM=10
 SEED=0
 
+#FT
+CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'finetuning' --tasknum $TASK_NUM --seed $SEED --model 'Resnet18' --batch-size 32 --lr 0.0005  --nepochs 50
+
 #EWC
 LAMB=300000
 CPR_BETA=0.4

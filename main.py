@@ -27,10 +27,9 @@ elif args.approach == 'ewc_cpr' or args.approach == 'mas_cpr' or args.approach =
     log_name = '{}_{}_{}_{}_lamb_{}_lr_{}_cpr_beta_{}_batch_{}_epoch_{}'.format(args.date, args.experiment, args.approach,args.seed, 
                                                                        args.lamb, args.lr, args.cpr_beta,
                                                                              args.batch_size, args.nepochs)
-    print ('seed : ', args.seed)
 elif args.approach == 'ags_cl_cpr':
-    log_name = '{}_{}_{}_{}_lamb_{}_mu_{}_lr_{}_cpr_beta_{}_batch_{}_epoch_{}'.format(args.date, args.experiment, args.approach,args.seed, 
-                                                                       args.lamb, args.mu, args.lr, args.cpr_beta,
+    log_name = '{}_{}_{}_{}_lamb_{}_mu_{}_rho_{}_lr_{}_cpr_beta_{}_batch_{}_epoch_{}'.format(args.date, args.experiment, args.approach,args.seed, 
+                                                                       args.lamb, args.mu, args.rho, args.lr, args.cpr_beta,
                                                                              args.batch_size, args.nepochs)
 
 print('=' * 100)

@@ -36,12 +36,11 @@ def get_args():
     parser.add_argument('--batch-size', default=256, type=int, required=False, help='(default=%(default)d)')
     parser.add_argument('--lr', default=0.001, type=float, required=False, help='(default=%(default)f)')
     
-    parser.add_argument('--lamb', default='1', type=float, help='(default=%(default)f)')
-    parser.add_argument('--nu', default='0.1', type=float, help='(default=%(default)f)')
-    parser.add_argument('--mu', default=0, type=float, help='groupsparse parameter')
-    parser.add_argument('--c', default='0.9', type=float, help='(default=%(default)f)')
+    parser.add_argument('--lamb', default=1, type=float, help='(default=%(default)f)')
+    parser.add_argument('--nu', default=0.9, type=float, help='(default=%(default)f)')
+    parser.add_argument('--mu', default=1, type=float, help='groupsparse parameter')
+    parser.add_argument('--c', default=1, type=float, help='(default=%(default)f)')
     parser.add_argument('--rho', type = float, default=-2.783, help='initial rho')
-    parser.add_argument('--eta', default=0.9, type=float, help='(default=%(default)f)')
     parser.add_argument('--cpr-beta', default=0.0, type=float, help='(default=%(default)f)')
     
     parser.add_argument('--date', type=str, default='', help='(default=%(default)s)')

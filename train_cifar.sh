@@ -5,6 +5,9 @@ EXPERIMENT='split_cifar100'
 TASK_NUM=10
 SEED=0
 
+#FT
+CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'finetuning' --tasknum $TASK_NUM --seed $SEED --conv-net
+
 #EWC
 LAMB=12000
 CPR_BETA=0.5
@@ -42,6 +45,9 @@ CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT -
 EXPERIMENT='split_cifar10_100'
 TASK_NUM=11
 SEED=0
+
+#FT
+CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'finetuning' --tasknum $TASK_NUM --seed $SEED --conv-net
 
 #EWC
 LAMB=25000
@@ -81,6 +87,9 @@ EXPERIMENT='split_cifar100_10'
 TASK_NUM=11
 SEED=0
 
+#FT
+CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'finetuning' --tasknum $TASK_NUM --seed $SEED --conv-net
+
 #EWC
 LAMB=20000
 CPR_BETA=0.6
@@ -118,6 +127,9 @@ CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT -
 EXPERIMENT='split_cifar50_10_50'
 TASK_NUM=11
 SEED=0
+
+#FT
+CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'finetuning' --tasknum $TASK_NUM --seed $SEED --conv-net
 
 #EWC
 LAMB=12000

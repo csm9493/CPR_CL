@@ -5,16 +5,19 @@ EXPERIMENT='omniglot'
 TASK_NUM=50
 SEED=0
 
-#EWC
+#FT
+CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'finetuning' --tasknum $TASK_NUM --seed $SEED --conv-net
+
+EWC
 LAMB=100000
 CPR_BETA=1.0
 CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'ewc_cpr' --tasknum $TASK_NUM --seed $SEED --conv-net --lamb $LAMB
-CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'ewc_cpr' --tasknum $TASK_NUM --seed $SEED --conv-net --lamb $LAMB --cpr-beta $CPR_BETA
+CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'ewc_cpr' --tasknum $TASK_NUM --seed $SEED --conv-net --lamb $LAMB --cpr-beta $CPR_BETA 
 
 #SI
 C=8
 CPR_BETA=0.7
-CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'si_cpr' --tasknum $TASK_NUM --seed $SEED --conv-net --c $C
+CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'si_cpr' --tasknum $TASK_NUM --seed $SEED --conv-net --c $C &
 CUDA_VISIBLE_DEVICES=$GPU python main.py --date $DATE --experiment $EXPERIMENT --approach 'si_cpr' --tasknum $TASK_NUM --seed $SEED --conv-net --c $C --cpr-beta $CPR_BETA
 
 #MAS
