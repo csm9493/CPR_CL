@@ -39,11 +39,18 @@ $ ./train_cifar.sh
 $ ./train_omniglot.sh
 ```
 
-#### 3-3) Train 'Cub200' scenario using \[EWC, SI, MAS, Rwalk, AGS-CL\] with and without CPR
+#### 3-3) Train 'CUB200' scenario using \[EWC, SI, MAS, Rwalk, AGS-CL\] with and without CPR
 
 ```
 $ ./train_cub200.sh
 ```
+
+### 3.  Analyze experimental results
+
+1) Check './result_analysis_code/'. There are example ipython files to anayze the experimental results of [EWC, MAS, SI, Rwalk, AGS-CL] with or without CPR in CIFAR100. Note that the analysis results are for experiments conducted on only single seed.
+
+2) You can easily transform and use these files to analyze other results!
+
 
 ## QnA
 ### 1. How to apply CPR to another CL algorithm?
